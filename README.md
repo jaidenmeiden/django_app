@@ -3,7 +3,7 @@ Django makes it easier to build better web apps more quickly and with less code.
 
 ### Activate environment
 ```
-python3 -m venv venv  
+python3 -m venv .env  
 source venv/bin/activate
 ```
 ### Deactivate environment
@@ -12,15 +12,22 @@ deactivate
 ```
 ### Install tools
 ```
-pip install 
+pip install django -U
 pip freeze
 ```
 
-### Config application
+### Creating a project
 
+If this is your first time using Django, you’ll have to take care of some initial setup. Namely, you’ll need to auto-generate some code that establishes a **Django project – a collection** of settings for an instance of Django, including database configuration, Django-specific options and application-specific settings.
 
+From the command line, **cd** into a directory where you’d like to store your code, then run the following command:
 
 ```
+# New project
+django-admin startproject photobucket
+
+# New project with existing files
+django-admin startproject photobucket .
 
 ```
 
