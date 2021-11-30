@@ -15,15 +15,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from django.http import HttpResponse
-
-
-def index(request):
-    """Return a greeting"""
-    return HttpResponse('Hello, Jaiden')
-
+from django_app import views
 
 urlpatterns = [
-    path('index/', index),
+    path('hi/', views.hi),
+    path('hello/', views.hello),
+    path('debugger/', views.debugger),
+    path('list_numbers/', views.list_numbers),
     path('admin/', admin.site.urls),
 ]
